@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="image/png" sizes="16x16" rel="icon" href="/images/icons8-notes-16.png">
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="css/notes.css">
     <title>Pocket Notes</title>
 </head>
 <body>
-  {{>nav2}}
-  <div class="container my-4">
-    <h1>Hello {{username}}, Welcome to Pocket Notes</h1>
-    <div class="card mb-3" >
+  {{>nav2}} <br>
+  <div class="container my-4 ">
+    <h1 class="welcome animation">Hello {{username}}, <span> Welcome to Pocket Notes</span></h1>
+    <div class="card mb-3" style="border-radius:2rem ;" >
       <div class="row g-0">
         <div class="col-md-4">
           <img src="images/notes-app.png" width="65%;">
@@ -61,11 +62,17 @@
      <hr>
     <h1 class="my-4 container">Your Notes</h1>
     <hr>
-    <div id="notes" class="mx-5 container d-flex flex-wrap justify-content-around"></div>
+    <div id="notes" class=" container d-flex flex-wrap justify-content-around"></div>
     <div class="text-center">
     <button type="button" class=" btn btn-outline-danger btn-lg btn-floating" id="del" data-mdb-ripple-color="dark">
       Delete All
     </button></div>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"

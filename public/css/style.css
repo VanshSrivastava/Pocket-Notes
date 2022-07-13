@@ -1,8 +1,19 @@
-@import url('https://fonts.googleapis.com/css?family=Mukta');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 body{
-  font-family: 'Mukta', sans-serif;
+  font-family: 'Poppins', sans-serif;
 	height:100vh;
 	min-height:550px;
+    background: #ffafbd; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to top,
+      #ffc3a0,
+      #ffafbd
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to top,
+      #ffc3a0,
+      #ffafbd
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	background-repeat: no-repeat;
 	background-size:cover;
 	background-position:center;
@@ -16,18 +27,20 @@ a{
 .login-reg-panel{
     position: relative;
     top: 50%;
+    border-radius: 1.5em;
     transform: translateY(-50%);
 	text-align:center;
     width:70%;
 	right:0;left:0;
     margin:auto;
     height:400px;
-    background-color: rgba(236, 48, 20, 0.9);
+    background-color: #ff5b79;
 }
 .white-panel{
     background-color: rgba(255,255, 255, 1);
     height:500px;
     position:absolute;
+    border-radius: 1.5em;
     top:-50px;
     width:50%;
     right:calc(50% - 50px);
@@ -55,7 +68,7 @@ a{
     font-size: 18px;
 }
 .login-info-box{
-    width:30%;
+    width:40%;
     padding:0 50px;
     top:20%;
     left:0;
@@ -63,12 +76,13 @@ a{
     text-align:left;
 }
 .register-info-box{
-    width:30%;
+    width:40%;
     padding:0 50px;
     top:20%;
     right:0;
     position:absolute;
     text-align:left;
+    
     
 }
 .right-log{right:50px !important;}
@@ -152,4 +166,46 @@ a{
 }
 #navbarSupportedContent{
     transition: height 1.5s;
+}
+#loginToggle{
+    color: peachpuff;
+    cursor: pointer;
+}
+#loginToggle:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+#signupToggle{
+    color: peachpuff;
+    cursor: pointer;
+}
+#signupToggle:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.mobile{
+    display: none;
+}
+@media only screen and (max-width: 800px) {
+    .white-panel{
+        border-radius: 2em;
+        background-color: #ff5b79;
+        margin: -2em -6em 0 -3em;
+        width: auto;
+    }
+    .right-log{
+        height:600px;
+    }
+    .login-reg-panel{
+            background-color: white;
+     }
+     .mobile{
+         display: block;
+     }
+     .login-info-box{
+        display: none;
+    }
+    .register-info-box{
+        display: none;
+    }
 }

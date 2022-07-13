@@ -22,10 +22,32 @@ $('.login-reg-panel input[type="radio"]').on("change", function () {
   }
 });
 
-function toggleThis() {
-  var element = document.getElementById("navbarSupportedContent");
-  element.classList.toggle("show");
+function toggleLogin() {
+  var e=document.getElementById("white-pane");
+  e.classList.add("right-log");
+  var element = document.getElementById("lgin");
+  element.classList.remove("show-log-panel");
+    element.style.display = "none";
+
+  var element_2=document.getElementById("rgin");
+  element_2.classList.add("show-log-panel");
+    element_2.style.display = "block";
+ 
 } 
+function toggleSignup(){
+  var e=document.getElementById("white-pane");
+  e.classList.remove("right-log");
+
+  var element = document.getElementById("lgin");
+  element.classList.add("show-log-panel");
+  element.style.display = "block";
+
+  var element_2=document.getElementById("rgin");
+  element_2.classList.remove("show-log-panel");
+    element_2.style.display = "none";
+ 
+}
+
 
 
 let sgi = document.getElementById("signin-controller");

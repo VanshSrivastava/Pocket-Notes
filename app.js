@@ -59,14 +59,11 @@ app.post("/signedin", async (req, res) => {
         confirmpassword: confirmpass,
       });
 
-      console.log(req.body);
-
       const token = await userdetail.generateAuthToken();
       res.cookie("jwt", token, {
         expires: new Date(Date.now() + 3 * 24 * 60 * 60 * 1000),
         httpOnly: true,
       });
-      console.log("yeh bhi");
       const Detailed = await userdetail.save();
       await Detailed.save();
       res.status(201).json({ status: "ok" });
@@ -74,7 +71,6 @@ app.post("/signedin", async (req, res) => {
       throw Error;
     }
   } catch (err) {
-    console.log("idhar" + err);
     res.status(400).json({ status: false });
   }
 });
