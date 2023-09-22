@@ -13,10 +13,6 @@ user can access their notes from anywhere on any device.The user can
 log out of the app or the system at any time without affecting the previously stored notes. The user information is encrypted and saved in the
 database, making it secure and inaccessible to others.
 
-## Web-app link
-
-[Pocket Notes](https://pocket-notes-app.herokuapp.com/)
-
 
 ## Environment Variables
 
